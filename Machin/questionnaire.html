@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gablah</title>
+    <link rel="icon" href="/images/ico.svg">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="bodyMountains" onload="questionManager(2);">
+    <script src="script.js"></script>
+
+
+
+    <nav>
+      <ul>
+        <li><a class="navlink" href="index.html">Main</a></li>
+        <li><a href="bwa.html">Autre Page</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="void.html">Void</a></li>
+        <li><a href="RLC.html">RLC</a></li>
+      </ul>
+    </nav>
+
+    <!-- intitulé des questions -->
+    <h1 id="picTitle" class="gris"></h1>
+
+    <!-- choix de réponses -->
+    <div class="box zoom a-size">
+      <div>
+        <svg class="ans" onselectstart="return false" onclick="checkOut(1)">
+          <g>
+            <rect style="fill:rgba(250, 71, 150, 0.315)"/>
+            <text id="L0ans1" x='50%' y='42%' dominant-baseline="middle" style="fill:rgb(250, 71, 150)"></text>
+            <text id="L1ans1" x='50%' y='50%' dominant-baseline="middle" style="fill:rgb(250, 71, 150)"></text>
+            <text id="L2ans1" x='50%' y='58%' dominant-baseline="middle" style="fill:rgb(250, 71, 150)"></text>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <svg class="ans" onselectstart="return false" onclick="checkOut(2)">
+          <g>
+            <rect style="fill:rgba(250, 127, 51, 0.215)"/>
+            <text id="L0ans2" x='50%' y='42%' dominant-baseline="middle" style="fill:rgb(250, 127, 51)"></text>
+            <text id="L1ans2" x='50%' y='50%' dominant-baseline="middle" style="fill:rgb(250, 127, 51)"></text>
+            <text id="L2ans2" x='50%' y='58%' dominant-baseline="middle" style="fill:rgb(250, 127, 51)"></text>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <svg class="ans" id="ans3" onselectstart="return false" onclick="checkOut(3)">
+          <g>
+            <rect style="fill:rgba(250, 68, 51, 0.315)"/>
+            <text id="L0ans3" x='50%' y='42%' dominant-baseline="middle" style="fill:rgb(250, 68, 51)"></text>
+            <text id="L1ans3" x='50%' y='50%' dominant-baseline="middle" style="fill:rgb(250, 68, 51)"></text>
+            <text id="L2ans3" x='50%' y='58%' dominant-baseline="middle" style="fill:rgb(250, 68, 51)"></text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+
+    <!-- score -->
+    <p class="gris" id="scoreboard" onclick="normativePusher()"> Score </p>
+
+    <!-- barre à remplir -->
+    <div class="box"> 
+      <svg id="bar-a" height="20px" width="1vw">
+        <rect width="100%" style="fill:rgba(140, 140, 140, 0.8)"/>
+      </svg>
+      <svg id="bar-b" height="20px" width="98vw" onclick="timer(100)">
+        <rect style="fill:rgba(180, 180, 180, 0.2)"/>
+      </svg>
+    </div>
+
+    <!-- panneau de contrôle -->
+    <div class="box">
+
+      <!-- intéraction avec le questionnaire (rénit. & navigation rapide) -->
+      <div>
+        <div>
+          <button onclick="quickDisplayFunction()"> Quick Display </button> 
+          <input class="digit_input" type="text" id="quick_display_input" maxlength="2" onClick="this.select();"> </input> 
+        </div>
+        <div style="margin:5px">
+          <p class="gris"> of </p>
+        </div>
+        <div>
+          <input class="digit_input" type="text" id="question_count_input" maxlength="2" onClick="this.select();"> </input> 
+          <button onclick="questionManager(2)"> reset </button>
+        </div>
+      </div>
+
+      <!-- créateur de questions -->
+      <div>
+        <!-- intitulé et identifiant -->
+        <div>
+          <input class="digit_input" type="text" id="qinput_id" maxlength="2" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="ID"> </input>
+          <input class="large_input" type="text" id="qinput_question" maxlength="40" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="Entrez votre Question"> </input>
+        </div>
+
+        <!-- réponses -->
+        <div>
+          <div class="list">
+            <input class="medium_input" type="text" id="qinput_answerA1" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="Réponse 1"></input>
+            <input class="medium_input" type="text" id="qinput_answerB1" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="(Ligne 2*)"></input>
+            <svg class="checkbox" id="qinput_checkbox1" onclick="chosenAnswerManager(1)"><rect/></svg>
+          </div>
+          <div class="list">
+            <input class="medium_input" type="text" id="qinput_answerA2" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="Réponse 2"></input>
+            <input class="medium_input" type="text" id="qinput_answerB2" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="(Ligne 2*)"></input>
+            <svg class="checkbox" id="qinput_checkbox2" onclick="chosenAnswerManager(2)"><rect/></svg>
+          </div>
+          <div class="list">
+            <input class="medium_input" type="text" id="qinput_answerA3" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="Réponse 3"></input>
+            <input class="medium_input" type="text" id="qinput_answerB3" maxlength="12" onClick="this.select();" onkeydown="setTimeout('inputUpdate()', 1)" value="(Ligne 2*)"></input>
+            <svg class="checkbox" id="qinput_checkbox3" onclick="chosenAnswerManager(3)"><rect/></svg>
+          </div>
+
+          <!-- erreur et validation -->
+          <div>
+            <p class= "rouge", id="error_message"></p>
+            <button id="important_button" onclick="validate()" onmouseover="inputUpdate()"> Ajouter </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden-absolute">
+        <p id="endOfAll" onselectstart="return false" onclick="questionManager(2)"></p>
+      </div>
+
+  </body>
+</html>

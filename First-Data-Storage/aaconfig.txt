@@ -1,0 +1,2 @@
+WeightMode=1
+EasedInput=0

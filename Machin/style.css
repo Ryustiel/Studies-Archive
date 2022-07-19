@@ -1,0 +1,229 @@
+*{
+  margin: 0px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  max-width: 99.1vw;
+}
+
+/* fonds */
+body{
+  background-image: url("images/desert.svg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bodyDesert{
+  background-image: url("images/classicdesert.svg");
+}
+.bodyMountains{
+  background-image: url("images/mountains.svg");
+}
+.bodyForest{
+  background-image: url("images/forest.svg");
+}
+.NezAuSky {
+  background-image: url("images/NezAuSky.jpg");
+  background-size: 50%;
+}
+
+/* propriétés des textes... */
+.top_margin{
+  padding-top:80px;
+}
+
+h1{
+  text-align: center;
+  font-size: 80px;
+  color: rgba(255, 168, 36, 0.842);
+}
+.rr-format{
+  text-align: center;
+  padding: 25px;
+  margin: 50px;
+}
+
+.fit{
+  font-size: 300%;
+}
+
+.p1{
+  color: rgba(36, 131, 255, 0.5);
+  text-align: center;
+  font-size:500%;
+}
+
+/* couleurs */
+.frame{
+  background-color: rgba(0, 0, 0, 0.20)
+}
+
+.black{
+  color: rgba(0, 0, 0, 0.20);
+}
+.bleu{
+  color: rgba(186, 110, 248, 0.616);
+  padding: 20px;
+}
+.violet{
+  color: rgba(108, 33, 194, 0.582);
+  padding: 15px;
+}
+.gris{
+  color: rgba(105, 105, 105, 0.794);
+  padding-top: 15px;
+}
+.white{
+  color: rgba(37, 37, 37, 0.61);
+  padding: 15px;
+}
+.rouge{
+  color: red;
+}
+.annoyance{
+  color: rgba(254, 255, 255, 0.801);
+  background-color: rgba(0, 0, 0, 0.20);
+  padding: 5px;
+}
+
+/* organisation des div*/
+div{
+  display:inline-block;
+}
+
+.list *{
+  display: table;
+}
+
+.box{
+  width:100vw;
+  text-align: center;
+  margin: 0;
+}
+
+.a-size div{
+  width: 25%;
+  height: 25vw;
+  margin: 1.5%;
+  padding-top : 20px;
+}
+
+/* animation */
+.zoom div img,
+.zoom div svg{
+	transform: scale(1);
+  transition-duration: 300ms;
+}
+.zoom div:hover img,
+.zoom div:hover svg{
+	transform: scale(1.204);
+  transition-duration: 400ms;
+}
+
+/* navbar */
+nav{
+    padding-top: 20px;
+}
+nav ul{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+.no_nav_bg{
+  background-color: rgba(0, 0, 0, 0);
+}
+nav ul li{
+  margin: 2%;
+  list-style:none;
+  font-family: Impact;
+  color:rgb(46, 46, 46);
+}
+
+a:link{
+  text-decoration: none;
+  color:rgba(71, 71, 71, 0.774);
+  font-size: 2em;
+}
+a:visited{
+  color:rgba(47, 47, 47, 0.767);
+}
+
+/* zones d'input de texte */
+input{
+  width:99vw;
+  color: rgba(255, 168, 36, 0.842);
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.219);
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.digit_input{
+  width: 5vw;
+  height: 5vw;
+}
+
+.medium_input{
+  width: 20vw;
+}
+
+.large_input{
+  width: 70vw;
+}
+
+
+/* gestion des svg (et éventuels autres éléments attachés) */
+svg{
+  margin: 0px;
+}
+
+.ans{
+  border: 5px rgba(88, 88, 88, 0.315);
+  border-style: solid;
+  width: 100%;
+  height: 100%;
+}
+
+.ans g rect{
+  fill:rgba(138, 36, 255, 0.2)
+}
+.ans g text{
+  font-family: Impact;
+  font-size: 4vw;
+  text-anchor: middle;
+}
+
+rect{
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox{
+  width: 2vw;
+  height: 2vw;
+  padding-bottom: 20px;
+}
+.checkbox svg rect{
+  fill:rgb(0, 0, 0);
+  opacity: 0.5;
+  margin: 20px;
+}
+
+.hidden-absolute{
+  position: fixed;
+  left: 5vw;
+  top: 5vh;
+  width: 0vw;
+  height: 0vh;
+}
+.hidden-absolute p{
+  width: 86vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgb(227, 178, 255);
+  font-size: 8vw;
+  border: 2vw;
+  border-color: rgba(0, 0, 0, 0.01);
+  border-style: none;
+}
+
+/* autres */
+iframe{
+  padding: 100px;
+}

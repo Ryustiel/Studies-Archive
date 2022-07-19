@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gablah</title>
+    <link rel="icon" href="/images/ico.svg">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="bodyForest">
+    <script src="script.js"></script>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="bwa.html">Autre Page</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="void.html">Void</a></li>
+        <li><a href="RLC.html">RLC</a></li>
+      </ul>
+    </nav>
+
+    <!-- titre mis à jour par image2title() -->
+    <h1 id="picTitle" class="bleu"> Click on Something Edible </h1>
+
+    <!-- "choix" boutons à clicker -->
+    <div class="box zoom a-size">
+      <div> <a onclick="image2title(0)"> <img src="images/mango.svg" width=400px> </a> </div>
+      <div> <a onclick="image2title(1)"> <img src="images/portal.svg" width=240px> </a> </div>
+      <div> <a onclick="image2title(2)"> <img src="images/writtenportal.svg" width=380px> </a> </div>
+    </div>
+
+    <!-- titre mis à jour par image2title(); nombre de fois que la mangue a été clickée  -->
+    <p class="p1" id="success"></p>
+
+  </body>
+</html>
