@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>Simulations:</h2>
+<script type="text/javascript">
+    $(document).on('click', '.confirm-delete', function(){
+        ;
+    })
+</script>
+<ul>
+{% for sim in user_sims %}
+        <li>User:{{sim.user}}, Parameters:[{{sim.alpha}},{{sim.beta}},{{sim.gamma}},{{sim.delta}},{{sim.epsilon}}]
+            <a href="{% url 'run_sim' sim.id %}">Re-run</a>
+            <a href="{% url 'delete_sim' sim.id %}">Delete</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>User: {{user.username}}</h3>
+<form action="{% url 'profile' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Edit informations" />
+</form>
+{% if envoi %}Your personal information have been updated.
+{% else %}Please update your personal information, <em>email</em> is mandatory.
+{% endif %}
+<div>
+    <a href='/change-password'>change password</a>
+    <a href='/account-deletion'>delete account</a> 
+</div><!-- ADDON -->
+
+{% endblock %}

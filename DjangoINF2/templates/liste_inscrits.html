@@ -1,0 +1,46 @@
+{%extends "base.html"%}
+
+{% block content %}
+
+<h2>
+    Registered Users
+
+    {% if not user.is_authenticated %} 
+
+    (case of you would want to steal one of those - here's how to 
+    <a href="https://lincolnloop.com/blog/crack-django-passwords/">retrieve</a> 
+    the passwords) 
+
+    {% endif %}
+
+</h2>
+<p>(for testing purposes)</p>
+
+    <table class="table">
+        <tbody>
+
+            <tr>
+
+                <td>Username</td>
+                <td>Password Hash</td>
+                <td>Mail</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+
+            </tr>
+
+        {% for u in user_list %}
+            <tr>
+
+                <td>{{ u.username }}</td>
+                <td>{{ u.password }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.first_name }}</td>
+                <td>{{ u.last_name }}</td>
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

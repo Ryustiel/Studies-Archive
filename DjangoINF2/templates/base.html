@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% comment %}<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">{% endcomment %}
+    <title>{% block title %} Simulation interface.{% endblock %}</title>
+</head>
+<body>
+<header></header>
+    <div class="header">
+       {% block nav %}
+
+       <a class="button button-primary" href="/">Accueil</a>
+       <a class="button button-primary" href="/liste-inscrits">Liste Inscrits</a> <!-- ADDON -- A DEPLACER DANS UN IF -->
+       
+       <!--LOGGED IN AS EXTENSION-->
+       {% if user.is_authenticated %}
+       <a class="button button-primary" href="/profile/">Profile</a>
+       <a class="button button-primary" href="/sim_list/">Simulations</a>
+       <a class="button button-primary" href="/newsimu/">New Simulation</a>
+
+       <p>
+           logged in as {{user.get_username}} (<a href="/logout">logout</a>)
+        </p>
+
+       {% else %}
+       
+       <p>
+           Welcome.
+           Please <a href="/login">Login</a> or <a href="/register">Register</a> before going any further.
+       </p> 
+
+       {% endif %}
+
+       {% endblock %}
+   </div>
+   <section id="content" class="container">
+       {% block content %}{% endblock %}
+   </section>
+<footer class="footer"><div class="row">
+    <div class="two-thirds column">{% block infos %} {% now "H:i d/m/Y" %} {% endblock %} </div>
+    <div class="one-third column">INF2 TP</div>
+  </div></footer>
+</body>
+</html>

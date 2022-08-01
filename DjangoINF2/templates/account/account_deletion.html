@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Account{% endblock %}
+
+{% block content %}
+
+    <h2>You are about to delete your account !</h2>
+    <p>please type in your password if you wish to pursue</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Delete Account</button>
+    </form>
+
+    <p>{{message}}</p>
+
+{% endblock %}
