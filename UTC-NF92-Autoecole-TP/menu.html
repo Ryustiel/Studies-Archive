@@ -1,24 +1,49 @@
+<!DOCTYPE html>
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="UTF-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Gotham" rel="stylesheet" />
+    <link href="styles/sidebar.css" rel="stylesheet" type="text/css" />
+    
+    <title>Menu</title>
   </head>
 
   <body>
 
-    <ul type="none">
-      <li id='animation'><a href="accueil.html" target="content">HOMEPAGE</a></li>
-      <li><a href="inscription/ajouter_eleve.php" target="content">+ ELEVE</a></li>
-      <li><a href="pedagogie/ajouter_theme.html" target="content">+ THEME</a></li>
-      <li><a href="pedagogie/suppression_theme.html" target="content">- THEME</a></li>
-      <li><a href="calendrier/ajout_seance.php" target="content">+ SEANCE</a></li>
-      <li><a href="calendrier/inscription_eleve.php" target="content">+ INSCRIPTION</a></li>
-      <li><a href="calendrier/desinscription_eleve.php" target="content">- INSCRIPTION</a></li>
-      <li><a href="consultation/consultation_eleve.php" target="content">CONSULTATION</a></li>
-      <li><a href="consultation/visualisation_calendrier_eleve.php" target="content">CALENDRIER</a></li>
-    </ul>
+    <div class="container">
+      <p>Accueil</p>
+      <a href="accueil.html" target="content" onclick="document.getElementById('blah').submit();"><div class="box" style="background-color: #FF0000;">HOMEPAGE</div></a>
+    </div>
 
+    <div class="container">
+      <p>Gestion des élèves</p>
+      <a href="consultation/visualisation_calendrier_eleve.php" target="content"><div class="box" style="background-color: #FF8000;">CALENDRIERS</div></a>
+
+      <a href="consultation/consultation_eleve.php" target="content"><div class="box" style="background-color: #FFFF00;">CONSULTER UN ELEVE</div></a>
+
+      <a href="eleves/ajout_eleve.html" target="content"><div class="box" style="background-color: #00FF00;">AJOUTER UN ELEVE</div></a>
+    </div>
+
+    <div class="container">
+      <p>Contenus Pédagogiques</p>
+      <a href="seances/ajout_seance.php" target="content"><div class="box" style="background-color: #00FF80;">AJOUTER UNE SEANCE</div></a>
+
+      <a href="themes/ajout_theme.html" target="content"><div class="box" style="background-color: #00FFFF;">AJOUTER UN THEME</div></a>
+
+      <a href="themes/suppression_theme.php" target="content"><div class="box" style="background-color: #0080FF;">SUPPRIMER UN THEME</div></a>
+    </div>
+
+    <div class="container">
+      <p>Gestion des Séances Actives</p>
+      <a href="resultats/validation_seance.php" target="content"><div class="box" style="background-color: #0000FF;">VALIDER UNE SEANCE</div></a>
+
+      <a href="seances/inscription_eleve.php" target="content"><div class="box" style="background-color: #8000FF;">INSCRIRE UN ELEVE</div></a>
+
+      <a href="seances/desinscription_seance.php" target="content"><div class="box" style="background-color: #FF00FF;">DESINSCRIRE UN ELEVE</div></a>
+    </div>
+    
   </body>
 
 </html>

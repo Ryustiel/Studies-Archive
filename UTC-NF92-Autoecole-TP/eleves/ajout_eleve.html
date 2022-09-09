@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/formulaires.css" rel="stylesheet" type="text/css" />
+
+    <script>
+      function customConfirm() {
+        try {
+          var nomEleve = document.getElementById("nomEleve").value;
+          var prenomEleve = document.getElementById("prenomEleve").value;
+          var dateEleve = document.getElementById("dateEleve").value;
+          return confirm("Vous êtes sur le point d'ajouter " + prenomEleve + " " + nomEleve + " né le " + dateEleve + ". Cette action est irréversible. Vérifiez attentivement les informations saisies.");
+        } catch (err) {
+          alert(err.message);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class='header'><p>Ajouter un nouvel élève</p></div>
+        <form method="post" action="ajouter_eleve.php">
+          <div class='container'>
+
+          <div>
+            <label>Nom</label>
+            <input type="text" name="nomEleve" id="nomEleve" maxlength="40" required placeholder="Nom de l'élève">
+          </div>
+          <div>
+            <label>Prénom</label>
+            <input type="text" name="prenomEleve" id="prenomEleve" required placeholder="Prénom de l'élève">
+          </div>
+
+          <div>
+            <label>Date de Naissance</label>
+            <input type="date" name="dateEleve" id="dateEleve" required>
+          </div>
+        
+          <input type="submit" class="submit-button" id="submit" value="Ajouter l'élève" onclick="return customConfirm()">
+        </div>
+      </form>
+    </div>
+  </body>
+
+</html>

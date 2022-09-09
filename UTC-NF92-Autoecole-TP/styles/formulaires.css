@@ -1,0 +1,79 @@
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 70vh;
+  margin-top: 2vh;
+}
+
+.submit-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.5vh;
+  margin-top: 1vh;
+}
+
+input {
+  width: 100%;
+  height: 4vh;
+  transition: all 0.3s;
+}
+
+select {
+  width: 100%;
+  height: 20vh; 
+  transition: all 0.3s;
+}
+
+input:hover {
+  transform: scale(1.03);
+  height: 5.5vh;
+  align-items: center;
+}
+
+select:hover {
+  transform: scale(1.015);
+  height: 23vh;
+  align-items: center;
+}
+
+input[type="submit"] {
+  transition: all 0.5s;
+  width: 80%;
+  height: 8vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.07);
+  height: 11vh;
+}
+
+input[type="checkbox"] {
+  width: 20%;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
