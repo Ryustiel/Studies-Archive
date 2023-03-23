@@ -1,0 +1,52 @@
+# 1 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3\\main.cpp"
+# 1 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3\\main.cpp"
+# 1 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3\\fraction.h" 1
+       
+
+namespace MATH {
+    class Fraction {
+        private:
+            int numerator, denominator;
+
+        public:
+
+            Fraction() {
+                numerator = 0;
+                denominator = 1;
+            }
+
+
+            Fraction(int num, int den) {
+                numerator = num;
+                denominator = den;
+            }
+
+
+            Fraction(const Fraction& other) {
+                numerator = other.numerator;
+                denominator = other.denominator;
+            }
+
+            setFraction(int n, int d);
+
+
+            int getNumerator() const { return numerator; }
+            int getDenominator() const { return denominator; }
+    }
+}
+# 42 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3\\fraction.h"
+void MATH::Fraction::setFraction(int n, int d) {
+    if (d == 0) throw "erreur";
+    numerator = n; denominator = d;
+}
+# 2 "C:\\Users\\ongki\\OneDrive\\Documents\\GitHub\\Studies-Archive\\UTC-LO21\\TD3\\main.cpp" 2
+
+int main() {
+    MATH::Fraction f1(3, 4);
+
+    MATH::Fraction frac;
+    frac.setFraction(3, 4)
+}
