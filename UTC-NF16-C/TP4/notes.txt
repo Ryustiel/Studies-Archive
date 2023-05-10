@@ -1,0 +1,21 @@
+﻿Notes du prof : 
+    Quand on veut copier un autre arbre, on copie tous les éléments de l'arbre
+    Si ABR 2 n'est pas vide, il faut s'assurer qu'il y a exactement les mêmes informations dedans.
+    On n'exige pas de maintenir la structure entre les deux ABR, on n'exige pas qu'ils aient la même structure, 
+    on exige qu'ils aient le même contenu.
+
+    Vous pourriez également faire un truc vous faites la manip ici vous faites la manip là, c'est pas ce qu'on vous demande.
+    Ce qu'on vous demande c'est vous faites une comparaison des éléments de cet arbre, et vous les reportez ici.
+
+    L'idée n'est pas de vider tout l'arbre. C'est pas vous venez vous détruisez tout l'arbre, et vous en créez un nouveau.
+    Finalement cette fonction est très ouverte. Si vous en arrivez à avoir une copie de l'arbre, vous avez répondu au sujet.
+    Mais si vous détruiez tout l'arbre, vous sortez un petit peu du cadre. Parce que c'est copier et mettre à jour.
+    Mais cette fonction là il y a beaucoup de marge de manoeuvre. Il peut y avoir presque autant de solutions que de groupes.
+
+
+    (Parlant des tests)
+    Il y a un cas particulier avec les ABR que tout le monde oublie, enfin presque tout le monde. 
+    Avec ça comme structure, je dois insérer les données dans un certain ordre, pas juste comme ça.
+
+    Comparer des char* : strcmp
+    Liste des consultations : pas grave si c'est pas trié

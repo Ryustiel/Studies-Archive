@@ -1,0 +1,36 @@
+
+
+void inserer_patient(Parbre* abr, char nm[30], char pr[30]);
+
+- Patient* CreerPatient(char nm[60], char pr[30]);
+
+
+void ajouter_consultation(Parbre* abr, char nm[30], char date[10], char motif[120], int nivu);
+
+- Patient* rechercher_patient(Parbre* abr, char nm[30]);
+
+- int datecmp(char date1[10], char date2[10]);
+
+
+void afficher_fiche(Parbre* abr, char nm[60]);
+
+void afficher_patients(Parbre* abr);
+
+Consultation* CreerConsult(char date[10], char motif[120], int nivu);
+
+
+void supprimer_patient(Parbre* abr, char nm[30]);
+
+- void free_patient(Patient* p);
+
+
+void maj(Parbre* abr, Parbre* abr2);
+
+- void maj_consultations(Consultation* reference, Patient* patient_modifier);
+
+- void supprimer_consultations(Patient* p);
+
+- void free_all_patients(Patient* p);
+
+
+void interface();

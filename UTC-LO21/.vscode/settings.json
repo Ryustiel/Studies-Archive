@@ -2,6 +2,7 @@
     "files.associations": {
         "*.embeddedhtml": "html",
         "*.rmd": "markdown",
-        "random": "cpp"
+        "random": "cpp",
+        "iosfwd": "cpp"
     }
 }
